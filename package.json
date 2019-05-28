@@ -1,0 +1,43 @@
+{
+  "name": "hrla29-front-end-capstone",
+  "description": "> Project description",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server/index.js",
+    "db:setup": "node database/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "lorem-ipsum": "^2.0.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.8",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.19.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tormund-and-big-lady/hrla29-front-end-capstone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tormund-and-big-lady/hrla29-front-end-capstone/issues"
+  },
+  "homepage": "https://github.com/tormund-and-big-lady/hrla29-front-end-capstone#readme"
+}
