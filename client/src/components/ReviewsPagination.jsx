@@ -5,7 +5,6 @@ class ReviewsPagination extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: ['is this working','let me know','c','d','e','f','g','h','i','j','k'],
       currentPage: 1,
       todosPerPage: 4,
       reviews: []

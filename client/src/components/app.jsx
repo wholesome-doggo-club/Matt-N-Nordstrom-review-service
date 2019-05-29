@@ -10,10 +10,20 @@ class App extends React.Component {
       reviews: []
     }
     this.fetchReviews = this.fetchReviews.bind(this);
+    this.refreshReviews = this.refreshReviews.bind(this);
   }
 
   componentDidMount() {
-    this.fetchReviews();
+    this.refreshReviews();
+  }
+
+  refreshReviews() {
+    axios
+      .delete('/api/delete')
+      .then(() => {
+        this.fetchReviews();
+      })
+      .catch(err => console.log('error delete all:', err))
   }
 
   fetchReviews() {

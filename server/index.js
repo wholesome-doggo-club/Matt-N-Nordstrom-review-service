@@ -4,6 +4,7 @@ const app = express()
 const port = 3500
 const db = require('../database')
 const path = require('path')
+const seed = require('../database/seed.js')
 
 app.use(parser.urlencoded({ extended: true }))
 app.use(parser.json())
@@ -29,8 +30,14 @@ app.post('/api', (req, res) => {
 app.delete('/api/delete', (req, res) => {
   console.log("in deleteAll")
   db.review.deleteMany({})
-    .then(() => res.status(200).send("all deleted"))
+    .then(() => {
+      res.status(200).send("all deleted");
+      //seed!
+      seed.insertSampleReviews();
+    })
     .catch(err => res.status(404).send("error deleting all: ", err))
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}!`))
+app.listen(port, () => {
+  console.log(`Listening on port ${port}!`);
+})

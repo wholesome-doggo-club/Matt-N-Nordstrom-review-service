@@ -9,17 +9,17 @@ class ReviewSort extends React.Component {
     this.state = {
       showMenu: false,
       dropdownL: ['All stars', '1 star', '2 star', '3 star', '4 star', '5 star'],
-      currentSelectionL: 'Star Rating',
       dropdownR: ['Sort Reviews', 'Star Rating', 'Submission Time'],
+      currentSelectionL: 'Star Rating',
       currentSelectionR: 'Sort Reviews',
       allReviews: [],
       sortedReviews: [],
 
     };
     this.showMenuL = this.showMenuL.bind(this);
-    this.closeMenuL = this.closeMenuL.bind(this);
     this.handleChangeL = this.handleChangeL.bind(this);
     this.showMenuR = this.showMenuR.bind(this);
+    this.closeMenuL = this.closeMenuL.bind(this);
     this.closeMenuR = this.closeMenuR.bind(this);
     this.handleChangeR = this.handleChangeR.bind(this);
     this.fetchReviews = this.fetchReviews.bind(this);
@@ -28,10 +28,12 @@ class ReviewSort extends React.Component {
     this.handleClick = this.handleClick.bind(this);
 
   }
-  
-  componentDidMount() {
-    this.fetchReviews();
-  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.reviews !== prevProps.reviews) {
+      this.fetchReviews();
+    }
+  }  
 
   handleClick(event) {
     this.setState({
@@ -53,6 +55,7 @@ class ReviewSort extends React.Component {
 
   showMenuL(event) {
     event.preventDefault();
+    // console.log(event.target)
     this.setState({
       currentSelectionL: 'Star Rating',
       showMenuL: true
@@ -62,13 +65,18 @@ class ReviewSort extends React.Component {
   }
   
   closeMenuL(event) {
-    
     if (!this.dropdownLMenu.contains(event.target)) {
-      
       this.setState({ showMenuL: false }, () => {
         document.removeEventListener('click', this.closeMenuL);
       });
-      
+    }
+  }
+
+  closeMenuR(event) {
+    if (!this.dropdownRMenu.contains(event.target)) {
+      this.setState({ showMenuR: false }, () => {
+        document.removeEventListener('click', this.closeMenuR);
+      });
     }
   }
 
@@ -101,16 +109,6 @@ class ReviewSort extends React.Component {
     });
   }
   
-  closeMenuR(event) {
-    
-    if (!this.dropdownRMenu.contains(event.target)) {
-      
-      this.setState({ showMenuR: false }, () => {
-        document.removeEventListener('click', this.closeMenuR);
-      });
-      
-    }
-  }
 
   handleChangeR(event) {
     this.rightSort(event.target.textContent);

@@ -24,7 +24,7 @@ const ReviewsNav = (props) => {
         avgFit += review.fit;
       })
       avgFit = Math.round(avgFit / props.reviews.length)
-      const sizes = ['small', ,'slightly small', 'true to size', 'slightly large', 'large']
+      const sizes = ['runs small', ,'runs slightly small', 'true to size', 'runs slightly large', 'runs large']
       return sizes[avgFit];
     }();
   }
@@ -39,7 +39,7 @@ const ReviewsNav = (props) => {
             </div>
           </div> ({numReviews})
         </span>
-        <span className="reviewsNavFooter-fit"><b>Fit rating:</b> runs {fitAverage}</span>
+        <span className="reviewsNavFooter-fit"><b>Fit rating:</b> {fitAverage}</span>
         <span className="reviewNavFooter-post">Write a Review</span>
       </span>
     </div>

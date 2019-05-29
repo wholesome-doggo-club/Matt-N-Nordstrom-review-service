@@ -3779,7 +3779,7 @@ let reviews = [
  },
  {
    createdAt: "24-Dec-18",
-   nickName: "Nordstrom Prime Customer",
+   nickName: "Nordstrom Customer",
    title: "Perfect fit!",
    body: "I'm 5'6'' and 135lbs.  I've realized my body just loves these Levi's Skinny Jeans.I go for 27 R and it fits great.  They allow me to stretch and move but stay fit wise well.  No stretching noted with the first few months noted on these.  I have noted some stretching in their cheaper (strauss?) brand in the past.  These originals I haven't noted that.The 'boombox' is a fun speckle look I got a bunch of comments on.  I bought the black recently as well.  I plan to gradually gather multiples from this levi brand and style!",
    rating: 5,
@@ -3941,7 +3941,7 @@ let reviews = [
    createdAt: "29-Jan-19",
    nickName: "Cagilbert04",
    title: "I purchased these three times!",
-   body: "I purchased these jeans three times- my first pair was too small, although it is the standard size I buy. Like waaaay too small, so I ordered up two sizes, no big deal. It's just a label. Those pants were literally falling off. The next size down, which was only one size larger than the initial pair, fit fine-ish. They were more boyfriend fit, not skinny. They did not hold their shape after washing them. Thank goodness for nordstrom Prime, because this trial and error has been a real pain, although when  I purchase from the Levi's store, I don't seem to have the fit issues.",
+   body: "I purchased these jeans three times- my first pair was too small, although it is the standard size I buy. Like waaaay too small, so I ordered up two sizes, no big deal. It's just a label. Those pants were literally falling off. The next size down, which was only one size larger than the initial pair, fit fine-ish. They were more boyfriend fit, not skinny. They did not hold their shape after washing them. Thank goodness for nordstrom, because this trial and error has been a real pain, although when  I purchase from the Levi's store, I don't seem to have the fit issues.",
    rating: 2,
    fit: 3
  },
@@ -4229,7 +4229,7 @@ let reviews = [
    createdAt: "14-Oct-18",
    nickName: "ALMO",
    title: "Came as Described and fit well.",
-   body: "I recently bought these Levi jeans in black and was looking for some new white denim for the season. These came packaged folded nicely in the plastic sleeve inside a cardboard box with a few other items also ordered via Prime.  The first pic shows them as they looked before being opened and the 2nd is then laid out on the ugly carpet (sorry about the eye sore) but it shows the bright white of these pants. The last picture shows how the waist fit on me- I dont think they're too tight not too loose. I am often between a 24 and 25' so this skinny mid to high waist I chose the 25. They are a little long but or reference I'm only about 5'1' and 100lbs si it is expected I'll wear heels or get them altered.",
+   body: "I recently bought these Levi jeans in black and was looking for some new white denim for the season. These came packaged folded nicely in the plastic sleeve inside a cardboard box with a few other items.  The first pic shows them as they looked before being opened and the 2nd is then laid out on the ugly carpet (sorry about the eye sore) but it shows the bright white of these pants. The last picture shows how the waist fit on me- I dont think they're too tight not too loose. I am often between a 24 and 25' so this skinny mid to high waist I chose the 25. They are a little long but or reference I'm only about 5'1' and 100lbs si it is expected I'll wear heels or get them altered.",
    rating: 5,
    fit: 3
  },
@@ -4501,7 +4501,7 @@ let reviews = [
    createdAt: "25-Oct-18",
    nickName: "TxLauren",
    title: "Different Colors, Different Fits!!",
-   body: "I purchased oriole, hella shady, and little secret. All in 30. I usually get a 29 but I’ve heard they run small. The pair in hella shady is a much heavier denim that stretches out quickly, at least half a size. I love the thick, heavy denim and the stretching out wouldn’t be a problem if I’d known and had ordered a size down. Really love the color and the fit otherwise! The back pockets do seem to be slightly farther apart than on the other two pair which I think causes a persons rear to look a little wider than normal. Both the oriole and little secret are a slightly thinner denim with much more Lycra. They fit great. The waist is the only thing that stretches out and it’s very slight and doesn’t really bother me too much, the next size down was just a bit too tight across my hips so these are just perfect. The back pockets are positioned in a very flattering way. The legs don’t stretch out and look slouchy. I’m really, really glad I ordered these and I would highly recommend them. Just be aware that not all colors have the same Lycra content so the same size may fit very differently in different colors. Thank goodness for free returns with prime!!",
+   body: "I purchased oriole, hella shady, and little secret. All in 30. I usually get a 29 but I’ve heard they run small. The pair in hella shady is a much heavier denim that stretches out quickly, at least half a size. I love the thick, heavy denim and the stretching out wouldn’t be a problem if I’d known and had ordered a size down. Really love the color and the fit otherwise! The back pockets do seem to be slightly farther apart than on the other two pair which I think causes a persons rear to look a little wider than normal. Both the oriole and little secret are a slightly thinner denim with much more Lycra. They fit great. The waist is the only thing that stretches out and it’s very slight and doesn’t really bother me too much, the next size down was just a bit too tight across my hips so these are just perfect. The back pockets are positioned in a very flattering way. The legs don’t stretch out and look slouchy. I’m really, really glad I ordered these and I would highly recommend them. Just be aware that not all colors have the same Lycra content so the same size may fit very differently in different colors. Thank goodness for free returns!!",
    rating: 5,
    fit: 3
  },
@@ -4555,7 +4555,15 @@ let reviews = [
  }
 ];
 
-const numReviews = Math.round((Math.random()*10) + 10)
+let numReviews = Math.round((Math.random()*10) + 10);
+
+const insertSampleReviews = function() {
+  let randReviews = getReviews();
+  numReviews = Math.round((Math.random()*10) + 10);
+  db.review.create(randReviews)
+    .then(() => console.log("DB Seeded!"))
+    .catch(err => console.log("error seeding: ",err));
+};
 
 const getReviews = function() {
   let array = [];
@@ -4586,12 +4594,9 @@ const getReviews = function() {
   return array;
 }
 
-var randReviews = getReviews()
 
-const insertSampleReviews = function() {
-  db.review.create(randReviews)
-    .then(() => db.disconnect())
-    .catch(err => console.log("error seeding: ",err));
-};
+// insertSampleReviews();
 
-insertSampleReviews();
+module.exports = {
+   insertSampleReviews
+}

@@ -12,12 +12,15 @@
     "db:setup": "node database/seed.js"
   },
   "dependencies": {
+    "css-loader": "^2.1.1",
     "express": "^4.16.4",
     "lorem-ipsum": "^2.0.2",
     "moment": "^2.24.0",
     "mongoose": "^5.5.8",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack-combine-loaders": "^2.0.4"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
