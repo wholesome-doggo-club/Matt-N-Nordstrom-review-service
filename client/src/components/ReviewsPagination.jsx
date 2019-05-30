@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import style from './css/ReviewsPagination.css';
-// import staticBottom from './staticBottom.png';
 
 class ReviewsPagination extends React.Component {
   constructor(props) {
@@ -88,7 +87,7 @@ class ReviewsPagination extends React.Component {
       <div>
           {renderTodos}
         <ul className={style.pageNumbers}>{renderPageNumbers}</ul>
-        <div className={style.staticB} src='https://i.ibb.co/z6TSqP0/static-Bottom.png' />
+        <img className={style.staticB} src='https://i.ibb.co/z6TSqP0/static-Bottom.png' />
       </div>
     );
   }
