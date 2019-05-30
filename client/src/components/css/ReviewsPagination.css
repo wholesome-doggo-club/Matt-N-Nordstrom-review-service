@@ -4,24 +4,25 @@
   list-style: none;
   justify-content: center;
   text-align: center;
+  line-height: 200%;
   border-top: solid #e3e3e3 1px;
   border-bottom: solid #e3e3e3 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 
 .paginationBox {
   width: 30px;
 }
 
-.activePage {
-  border-radius: 50%;
-  height: 30px;
-/*  width: 10px;
-  height: 10px;*/
+.paginationBox .activePage{
   background-color: #e3e3e3;
+  border-radius: 50%;
+}
+
+.activePage {
   font-weight: bold;
   cursor: default;
+  height: 30px;
 }
 
 .inactivePage {
@@ -30,7 +31,9 @@
 }
 
 .inactivePage:hover {
-  border-bottom: solid black 1px;
+  /*border-bottom: solid black 1px;*/
+  text-decoration: underline;
+
   cursor: pointer;
 }
 
@@ -108,7 +111,7 @@
 }
 
 .reviewFit {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .staticB {

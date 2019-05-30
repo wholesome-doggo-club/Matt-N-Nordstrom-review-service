@@ -44,10 +44,10 @@ module.exports = {
                        outputPath: 'fonts/'
                    }
                }]
-    }
-   ],
- },
- resolve: {
-   extensions: [ '.js', '.jsx']
- }
+      }
+    ],
+  },
+  resolve: {
+    extensions: [ '.js', '.jsx']
+  }
 };

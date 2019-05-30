@@ -30,6 +30,11 @@
   text-align: left;
 }
 
+.LeftSortHeader:after {
+  content:'';
+  background-color: red;
+}
+
 .LeftSort {
   display: flex;
   flex-direction: column;
