@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ReviewsPagination from './ReviewsPagination.jsx';
-
+import style from './ReviewSort.css';
 
 class ReviewSort extends React.Component {
   constructor(props) {
@@ -226,9 +226,9 @@ class ReviewSort extends React.Component {
 
     return (
       <div>
-        <div className="reviewsSortContainer">
-          <div className="reviewsStarSort">
-            <button className="LeftSortHeader" onClick={this.showMenuL}>
+        <div className={style.reviewsSortContainer}>
+          <div className={style.reviewsStarSort}>
+            <button className={style.LeftSortHeader} onClick={this.showMenuL}>
               {this.state.currentSelectionL}
             </button>
             
@@ -236,17 +236,16 @@ class ReviewSort extends React.Component {
               this.state.showMenuL
                 ? (
                   <div
-                    className="menu"
-                    ref={(element) => {
+                    className={style.menu} ref={(element) => {
                       this.dropdownLMenu = element;
                     }}
                   >
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>All stars</button>
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>1 star</button>
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>2 star</button>
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>3 star</button>
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>4 star</button>
-                    <button className="LeftSort" onClick={(e) => this.handleChangeL(e)}>5 star</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>All stars</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>1 star</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>2 star</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>3 star</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>4 star</button>
+                    <button className={style.LeftSort} onClick={(e) => this.handleChangeL(e)}>5 star</button>
                   </div>
                 )
                 : (
@@ -254,9 +253,9 @@ class ReviewSort extends React.Component {
                 )
             }
           </div>
-          <div className="reviewsReviewSort">
+          <div className={style.reviewsReviewSort}>
             <div>
-              <button className="dateSortHeader" onClick={this.showMenuR}>
+              <button className={style.dateSortHeader} onClick={this.showMenuR}>
                 {this.state.currentSelectionR}
               </button>
               
@@ -264,13 +263,12 @@ class ReviewSort extends React.Component {
                 this.state.showMenuR
                   ? (
                     <div
-                      className="menu"
-                      ref={(element) => {
+                      className={style.menu} ref={(element) => {
                         this.dropdownRMenu = element;
                       }}
                     >
-                      <button className="dateSort" onClick={(e) => this.handleChangeR(e)}>Star Rating</button>
-                      <button className="dateSort" onClick={(e) => this.handleChangeR(e)}>Submission Time</button>
+                      <button className={style.dateSort} onClick={(e) => this.handleChangeR(e)}>Star Rating</button>
+                      <button className={style.dateSort} onClick={(e) => this.handleChangeR(e)}>Submission Time</button>
                     </div>
                   )
                   : (

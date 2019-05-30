@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewsNav from './ReviewsNav.jsx';
 import ReviewsMain from './ReviewsMain.jsx';
+import style from './app.css';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -39,8 +40,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <ReviewsNav className="reviewsNav" reviews={this.state.reviews} />
+      <div className={style.container}>
+        <ReviewsNav className={style.reviewsNav} reviews={this.state.reviews} />
         <ReviewsMain reviews={this.state.reviews} />
       </div>
       )

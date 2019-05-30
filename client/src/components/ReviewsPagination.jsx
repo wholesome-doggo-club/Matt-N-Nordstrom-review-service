@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import style from './ReviewsPagination.css'
 
 class ReviewsPagination extends React.Component {
   constructor(props) {
@@ -43,18 +44,18 @@ class ReviewsPagination extends React.Component {
 
     const renderTodos = currentTodos.map((todo, index) => {
       return (
-          <div className="reviewPostContainer" key={index}>
-            <div className="reviewSmallContainer">
-              <div className="reviewMainStars-outer">
-                <div className="reviewMainStars-inner" style={{ width: `${this.ratingWidth(`${todo.rating}`)}` }}></div>
+          <div className={style.reviewPostContainer} key={index}>
+            <div className={style.reviewSmallContainer}>
+              <div className={style.reviewMainStarsOuter}>
+                <div className={style.reviewMainStarsInner} style={{ width: `${this.ratingWidth(`${todo.rating}`)}` }}></div>
               </div>
-              <div className="reviewMainTitle">{todo.title}</div>
-              <div className="reviewMainBody">{todo.body}</div>
-              <div className="reviewMainNickName">{todo.nickName}</div>
+              <div className={style.reviewMainTitle}>{todo.title}</div>
+              <div className={style.reviewMainBody}>{todo.body}</div>
+              <div className={style.reviewMainNickName}>{todo.nickName}</div>
             </div>
-            <div className="rightBox">
-              <div className="reviewDate">{moment(`${todo.createdAt}`).format('MMM DD, YYYY')}</div><br />
-              <div className="reviewFit"><strong>Fit:</strong> {this.ratingFit(`${todo.fit}`)} </div>
+            <div className={style.rightBox}>
+              <div className={style.reviewDate}>{moment(`${todo.createdAt}`).format('MMM DD, YYYY')}</div><br />
+              <div className={style.reviewFit}><strong>Fit:</strong> {this.ratingFit(`${todo.fit}`)} </div>
             </div>
           </div>
         )
@@ -67,23 +68,27 @@ class ReviewsPagination extends React.Component {
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
-      return (
-        <li
-          key={number}
-          id={number}
-          onClick={this.handleClick}
-        >
-          {number}
-        </li>
-      );
+      // console.log("CURRENT PAGE: ", this.state.currentPage, "Number: ", number)
+      // console.log(typeof(this.state.currentPage), typeof(number))
+      if (this.state.currentPage === number) {
+        return (
+          <div key={number} className={style.paginationBox}>
+            <li key={number} id={number} className={style.activePage} onClick={this.handleClick}>{number}</li>
+          </div>
+          )
+      } else {
+        return (
+          <div key={number} className={style.paginationBox}>
+            <li key={number} id={number} className={style.inactivePage} onClick={this.handleClick}>{number}</li>
+          </div>
+        );
+      }
     });
 
     return (
       <div>
           {renderTodos}
-        <ul id="page-numbers">
-          {renderPageNumbers}
-        </ul>
+        <ul className={style.pageNumbers}>{renderPageNumbers}</ul>
       </div>
     );
   }

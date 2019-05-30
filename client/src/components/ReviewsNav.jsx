@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './ReviewsNav.css';
 
 const ReviewsNav = (props) => {
 
@@ -24,23 +25,23 @@ const ReviewsNav = (props) => {
         avgFit += review.fit;
       })
       avgFit = Math.round(avgFit / props.reviews.length)
-      const sizes = ['runs small', ,'runs slightly small', 'true to size', 'runs slightly large', 'runs large']
+      const sizes = ['runs small', ,'runs slightly small', 'runs true to size', 'runs slightly large', 'runs large']
       return sizes[avgFit];
     }();
   }
 
   return (
-    <div className="reviewsNav">
-      <span className="reviewsNavHeader">REVIEWS</span>
-      <span className="reviewsNavFooter">
-        <span className="reviewsNavFooter-stars">
-          <div className="stars-outer">
-            <div className="stars-inner" style={{ width: `${ratingAverage}` }}>
+    <div className={style.reviewsNav}>
+      <span className={style.reviewsNavHeader}>REVIEWS</span>
+      <span className={style.reviewsNavFooter}>
+        <span className={style.reviewsNavFooterStars}>
+          <div className={style.starsOuter}>
+            <div className={style.starsInner} style={{ width: `${ratingAverage}` }}>
             </div>
           </div> ({numReviews})
         </span>
-        <span className="reviewsNavFooter-fit"><b>Fit rating:</b> {fitAverage}</span>
-        <span className="reviewNavFooter-post">Write a Review</span>
+        <span className={style.reviewsNavFooterFit}><b>Fit rating:</b> {fitAverage}</span>
+        <span className={style.reviewNavFooterPost}>Write a Review</span>
       </span>
     </div>
     )

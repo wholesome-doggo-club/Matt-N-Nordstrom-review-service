@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewSort from './ReviewSort.jsx';
+import style from './ReviewMain.css'
 
 class ReviewsMain extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ class ReviewsMain extends React.Component {
 
   render() {
     return(
-      <div className="reviewsContainer">
+      <div className={style.reviewsContainer}>
         <ReviewSort reviews={this.props.reviews} />
       </div>
       )
