@@ -36,7 +36,7 @@
 .reviewPostContainer {
   display: flex;
   flex-direction: row;
-  font-family: 'Arial Normal', sans-serif;
+  /*font-family: 'Arial Normal', sans-serif;*/
   font-size: 16px;
   border-top: solid .5px #e3e3e3;
   padding-top: 40px;
@@ -45,7 +45,7 @@
 
 .reviewSmallContainer {
   display: flex;
-  font-family: 'Arial Normal', sans-serif;
+  /*font-family: 'Arial Normal', sans-serif;*/
   flex-direction: column;
   flex-wrap: wrap;
   width: 80%;
@@ -103,13 +103,12 @@
   font-size: 14px;
 }
 
-
 .reviewDate {
   font-size: 14px;
 }
 
 .reviewFit {
-  font-family: 'Arial Normal', sans-serif;
+  /*font-family: 'Arial Normal', sans-serif;*/
   font-size: 16px;
 }
 
