@@ -20,7 +20,7 @@ class App extends React.Component {
 
   refreshReviews() {
     axios
-      .delete('/api/delete')
+      .delete('/reviews/delete')
       .then(() => {
         this.fetchReviews();
       })
@@ -29,7 +29,7 @@ class App extends React.Component {
 
   fetchReviews() {
     axios
-      .get('/api')
+      .get('/reviews')
       .then(({ data }) => {
         this.setState({
           reviews: data

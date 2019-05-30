@@ -43,7 +43,7 @@ class ReviewSort extends React.Component {
 
   fetchReviews() {
     axios
-      .get('/api')
+      .get('/reviews')
       .then(({ data }) => {
         this.setState({
           allReviews: data,

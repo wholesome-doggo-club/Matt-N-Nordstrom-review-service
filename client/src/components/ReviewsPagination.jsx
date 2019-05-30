@@ -68,8 +68,6 @@ class ReviewsPagination extends React.Component {
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
-      // console.log("CURRENT PAGE: ", this.state.currentPage, "Number: ", number)
-      // console.log(typeof(this.state.currentPage), typeof(number))
       if (this.state.currentPage === number) {
         return (
           <div key={number} className={style.paginationBox}>
