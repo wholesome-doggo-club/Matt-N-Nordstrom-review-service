@@ -20,7 +20,7 @@
 }
 
 .LeftSortHeader {
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-weight: bold;
   font-size: 12px;
   outline: none;
@@ -33,7 +33,7 @@
 .LeftSort {
   display: flex;
   flex-direction: column;
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 12px;
   outline: none;
   border: solid #e3e3e3 1px;
@@ -48,7 +48,7 @@
 }
 
 .dateSortHeader {
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 12px;
   outline: none;
   border: solid #e3e3e3 1px;
@@ -58,7 +58,7 @@
 }
 
 .dateSort {
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 12px;
   outline: none;
   border: solid #e3e3e3 1px;

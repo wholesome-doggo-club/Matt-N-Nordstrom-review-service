@@ -55,7 +55,6 @@ class ReviewSort extends React.Component {
 
   showMenuL(event) {
     event.preventDefault();
-    // console.log(event.target)
     this.setState({
       currentSelectionL: 'Star Rating',
       showMenuL: true
@@ -188,6 +187,7 @@ class ReviewSort extends React.Component {
         array.push(review)
       }
     })
+    console.log(array)
     this.setState({
       sortedReviews: array
     })

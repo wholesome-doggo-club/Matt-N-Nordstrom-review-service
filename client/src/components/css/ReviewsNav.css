@@ -7,7 +7,7 @@
 
 .reviewsNavHeader {
   display: flex;
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 21px;
   font-weight: bold;
   padding-bottom: 20px;
@@ -29,7 +29,7 @@
 }
 
 .reviewsNavFooterFit {
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 16px;
   min-width: 225px;
   min-height: 25px;
@@ -73,7 +73,7 @@
 
 .reviewNavFooterPost {
   display: flex;
-  font-family: 'Arial Normal', sans-serif;
+  font-family: 'Brandon Text';
   font-size: 16px;
   border: solid .5px;
   width: 220px;

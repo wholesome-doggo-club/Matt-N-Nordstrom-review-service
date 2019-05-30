@@ -15,6 +15,14 @@ class ReviewsPagination extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    console.log("ComponentDidMount!!")
+  }
+
+  componentDidUpdate() {
+    console.log("Updated SortedReviews: ", this.props.sortedReviews)
+  }
+
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
@@ -68,6 +76,7 @@ class ReviewsPagination extends React.Component {
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
+
       if (this.state.currentPage === number) {
         return (
           <div key={number} className={style.paginationBox}>
@@ -87,7 +96,8 @@ class ReviewsPagination extends React.Component {
       <div>
           {renderTodos}
         <ul className={style.pageNumbers}>{renderPageNumbers}</ul>
-        <img className={style.staticB} src='https://i.ibb.co/z6TSqP0/static-Bottom.png' />
+        <img className={style.staticB} src='https://i.ibb.co/zn5y2MM/recent-Views.png' />
+        <img className={style.staticB} src='https://i.ibb.co/dBVCwqq/nav-Bottom.png' />
       </div>
     );
   }
