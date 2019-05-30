@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewSort from './ReviewSort.jsx';
-import style from './ReviewMain.css'
+import style from './css/ReviewMain.css'
 
 class ReviewsMain extends React.Component {
   constructor() {

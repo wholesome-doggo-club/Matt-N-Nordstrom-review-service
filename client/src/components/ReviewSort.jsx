@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ReviewsPagination from './ReviewsPagination.jsx';
-import style from './ReviewSort.css';
+import style from './css/ReviewSort.css';
 
 class ReviewSort extends React.Component {
   constructor(props) {

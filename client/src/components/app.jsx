@@ -1,7 +1,7 @@
 import React from 'react';
 import ReviewsNav from './ReviewsNav.jsx';
 import ReviewsMain from './ReviewsMain.jsx';
-import style from './app.css';
+import style from './css/app.css';
 import axios from 'axios';
 
 class App extends React.Component {

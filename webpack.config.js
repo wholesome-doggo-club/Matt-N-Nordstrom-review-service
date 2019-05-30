@@ -44,7 +44,7 @@ module.exports = {
                        outputPath: 'fonts/'
                    }
                }]
-     }
+    }
    ],
  },
  resolve: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './ReviewsNav.css';
+import style from './css/ReviewsNav.css';
 
 const ReviewsNav = (props) => {
 

@@ -32,7 +32,6 @@ app.delete('/reviews/delete', (req, res) => {
   db.review.deleteMany({})
     .then(() => {
       res.status(200).send("all deleted");
-      //seed!
       seed.insertSampleReviews();
     })
     .catch(err => res.status(404).send("error deleting all: ", err))

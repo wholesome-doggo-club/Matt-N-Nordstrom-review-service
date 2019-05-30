@@ -1,0 +1,91 @@
+.reviewsNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.reviewsNavHeader {
+  display: flex;
+  font-family: 'Arial Normal', sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.reviewsNavFooter {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.reviewsNavFooterStars {
+  margin-top:-8px;
+  min-width: 225px;
+  min-height: 25px;
+}
+
+.reviewsNavFooterFit {
+  font-family: 'Arial Normal', sans-serif;
+  font-size: 16px;
+  min-width: 225px;
+  min-height: 25px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.reviewsNavFooterPost {
+  min-width: 225px;
+  min-height: 25px;
+}
+
+.starsInner {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.starsInner::before {
+  content: "★★★★★";
+  font-weight: 900;
+  font-size: 25px;
+  color: #000000;
+}
+
+.starsOuter {
+  position: relative;
+  display: inline-block;
+}
+
+.starsOuter::before {
+  content: "★★★★★";
+  font-weight: 900;
+  font-size: 25px;
+  color: #e3e3e3;
+}
+
+.reviewNavFooterPost {
+  display: flex;
+  font-family: 'Arial Normal', sans-serif;
+  font-size: 16px;
+  border: solid .5px;
+  width: 220px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.reviewNavFooterPost:hover {
+  transition: all 0.2s ease;
+  background-color: #e3e3e3;
+  border: solid transparent .5px;
+  cursor: pointer;
+}

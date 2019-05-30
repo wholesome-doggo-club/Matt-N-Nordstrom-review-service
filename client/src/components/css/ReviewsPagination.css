@@ -1,0 +1,118 @@
+.pageNumbers {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+  border-top: solid #e3e3e3 1px;
+  border-bottom: solid #e3e3e3 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.paginationBox {
+  width: 30px;
+}
+
+.activePage {
+  border-radius: 50%;
+  height: 30px;
+/*  width: 10px;
+  height: 10px;*/
+  background-color: #e3e3e3;
+  font-weight: bold;
+  cursor: default;
+}
+
+.inactivePage {
+/*  width: 10px;
+  height: 10px;*/
+}
+
+.inactivePage:hover {
+  border-bottom: solid black 1px;
+  cursor: pointer;
+}
+
+.reviewPostContainer {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Arial Normal', sans-serif;
+  font-size: 16px;
+  border-top: solid .5px #e3e3e3;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.reviewSmallContainer {
+  display: flex;
+  font-family: 'Arial Normal', sans-serif;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  padding-right: 60px;
+}
+
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.reviewMainStarsOuter {
+  z-index: -1;
+  position: relative;
+  display: inline-block;
+}
+
+.reviewMainStarsOuter::before {
+  content: "★★★★★";
+  font-weight: 900;
+  font-size: 16px;
+  color: #e3e3e3;
+}
+
+.reviewMainStarsInner {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.reviewMainStarsInner::before {
+  content: "★★★★★";
+  font-weight: 900;
+  font-size: 16px;
+  color: #000000;
+}
+
+.reviewMainTitle {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.reviewMainBody {
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reviewMainNickName {
+  font-size: 14px;
+}
+
+
+.reviewDate {
+  font-size: 14px;
+}
+
+.reviewFit {
+  font-family: 'Arial Normal', sans-serif;
+  font-size: 16px;
+}
+
+.staticB {
+  width: 100%;
+}
