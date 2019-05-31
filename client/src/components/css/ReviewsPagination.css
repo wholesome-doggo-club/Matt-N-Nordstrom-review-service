@@ -26,12 +26,10 @@
 }
 
 .inactivePage {
-/*  width: 10px;
-  height: 10px;*/
+  
 }
 
 .inactivePage:hover {
-  /*border-bottom: solid black 1px;*/
   text-decoration: underline;
 
   cursor: pointer;

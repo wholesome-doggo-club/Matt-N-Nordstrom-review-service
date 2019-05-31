@@ -228,10 +228,11 @@ class ReviewSort extends React.Component {
       <div>
         <div className={style.reviewsSortContainer}>
           <div className={style.reviewsStarSort}>
-            <button className={style.LeftSortHeader} onClick={this.showMenuL}>
+            <div className={style.LeftSortHeader}>
+            <button className={style.LeftSortHeader1} onClick={this.showMenuL}>
               {this.state.currentSelectionL}
-            </button>
-            
+            </button><img className={style.CarotHeader} src="https://png.pngtree.com/svg/20170515/72e732539c.svg" />
+            </div>
             {
               this.state.showMenuL
                 ? (
@@ -255,9 +256,11 @@ class ReviewSort extends React.Component {
           </div>
           <div className={style.reviewsReviewSort}>
             <div>
-              <button className={style.dateSortHeader} onClick={this.showMenuR}>
+            <div className={style.dateSortHeader}>
+              <button className={style.dateSortHeader1} onClick={this.showMenuR}>
                 {this.state.currentSelectionR}
-              </button>
+              </button><img className={style.CarotHeader} src="https://png.pngtree.com/svg/20170515/72e732539c.svg" />
+            </div>
               
               {
                 this.state.showMenuR
