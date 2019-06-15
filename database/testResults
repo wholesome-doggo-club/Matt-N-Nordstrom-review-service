@@ -1,0 +1,104 @@
+Test Results
+
+Mongo:
+#1 800 r/s. 60s
+All virtual users finished
+Summary report @ 10:33:00(-0700) 2019-06-13
+  Scenarios launched:  48000
+  Scenarios completed: 42386
+  Requests completed:  42386
+  RPS sent: 482.17
+  Request latency:
+    min: 1.1
+    max: 23457
+    median: 4.5
+    p95: 23010
+    p99: 23243
+  Scenario counts:
+    0: 48000 (100%)
+  Codes:
+    200: 42386
+  Errors:
+    ECONNRESET: 22
+    ETIMEDOUT: 5592
+
+#2 800 r/s. 60s
+All virtual users finished
+Summary report @ 11:51:47(-0700) 2019-06-13
+  Scenarios launched:  48000
+  Scenarios completed: 42384
+  Requests completed:  42384
+  RPS sent: 479.19
+  Request latency:
+    min: 2.2
+    max: 23386.9
+    median: 5.6
+    p95: 22775
+    p99: 23141.2
+  Scenario counts:
+    0: 48000 (100%)
+  Codes:
+    200: 42384
+  Errors:
+    ECONNRESET: 15
+    ETIMEDOUT: 5601
+
+#3 500 r/s. 60s
+ll virtual users finished
+Summary report @ 11:57:31(-0700) 2019-06-13
+  Scenarios launched:  30000
+  Scenarios completed: 30000
+  Requests completed:  30000
+  RPS sent: 391.08
+  Request latency:
+    min: 1
+    max: 16349.3
+    median: 2
+    p95: 15962
+    p99: 16168.4
+  Scenario counts:
+    0: 30000 (100%)
+  Codes:
+    200: 30000
+
+#4 600 r/s 60s
+All virtual users finished
+Summary report @ 11:59:42(-0700) 2019-06-13
+  Scenarios launched:  36014
+  Scenarios completed: 35185
+  Requests completed:  35185
+  RPS sent: 392.99
+  Request latency:
+    min: 1
+    max: 16247.2
+    median: 3.1
+    p95: 15669.1
+    p99: 16044.9
+  Scenario counts:
+    0: 36014 (100%)
+  Codes:
+    200: 35185
+  Errors:
+    ETIMEDOUT: 829
+
+
+Postgres
+All virtual users finished
+Summary report @ 10:37:35(-0700) 2019-06-13
+  Scenarios launched:  48000
+  Scenarios completed: 41600
+  Requests completed:  41600
+  RPS sent: 484.6
+  Request latency:
+    min: 1.1
+    max: 24128.7
+    median: 4.6
+    p95: 23042.4
+    p99: 23392.6
+  Scenario counts:
+    0: 48000 (100%)
+  Codes:
+    200: 41600
+  Errors:
+    ECONNRESET: 597
+    ETIMEDOUT: 5803

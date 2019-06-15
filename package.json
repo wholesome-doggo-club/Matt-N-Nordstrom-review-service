@@ -12,12 +12,18 @@
     "db:setup": "node database/seed.js"
   },
   "dependencies": {
+    "assert": "^2.0.0",
     "express": "^4.16.4",
+    "faker": "^4.1.0",
     "lorem-ipsum": "^2.0.2",
     "moment": "^2.24.0",
+    "mongodb": "^3.2.7",
     "mongoose": "^5.5.8",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "sequelize": "^5.8.7",
     "style-loader": "^0.23.1",
     "webpack-combine-loaders": "^2.0.4"
   },

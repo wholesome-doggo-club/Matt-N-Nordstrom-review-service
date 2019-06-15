@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/FEC_Nordstrom', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/reviews', {useNewUrlParser: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -8,35 +8,15 @@ db.once('open', function() {
 });
 
 var reviewSchema = new mongoose.Schema({
-  nickName: {
-    type: String,
-    required: true
-  },
+  id: Number,
+  reviews: Array
+});
 
-  rating: {
-    type: Number,
-    required: true
-  },
-
-  title: {
-    type: String,
-    required: true
-  },
-
-  body: {
-    type: String,
-    required: true
-  },
-
-  fit: {
-    type: Number,
-    required: true
-  }  
-}, {timestamps: true});
-
-const review = mongoose.model('Reviews', reviewSchema);
+const review = mongoose.model('reviewSchema', reviewSchema);
 
 module.exports = {
   db,
   review
 }
+
+// mongoimport --db reviews --collection reviewSchema --numInsertionWorkers 4 --file myOutput3.json
