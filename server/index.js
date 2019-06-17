@@ -24,7 +24,11 @@ app.get('/reviews', (req, res) => {
   })
 
 
-//Raw Postgres
+app.get('/loaderio-5b3a3d61e2ab3cebfdcfd968af8bc78a/', (req, res) => {
+  res.status(200).send('loaderio-5b3a3d61e2ab3cebfdcfd968af8bc78a')
+})
+
+//Raw Postgres 
 // const dbPostgres = require('../database/postgres/rawPostgres.js')
 // app.get('/reviews', (req, res) => {
 //     // let { id } = req.query;
