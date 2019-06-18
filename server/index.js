@@ -24,8 +24,8 @@ app.get('/reviews', (req, res) => {
   })
 
 
-app.get('/loaderio-5b3a3d61e2ab3cebfdcfd968af8bc78a/', (req, res) => {
-  res.status(200).send('loaderio-5b3a3d61e2ab3cebfdcfd968af8bc78a')
+app.get('/loaderio-3e1cabed509fdb63b636be2cd2128a76/', (req, res) => {
+  res.status(200).send('loaderio-3e1cabed509fdb63b636be2cd2128a76')
 })
 
 //Raw Postgres 
